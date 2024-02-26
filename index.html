@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Home</title>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $("#myButton").click(function() {
+                    $.ajax({
+                        url: "/api/some-pdf-file?"+Math.random(),
+                        method: "GET",
+                    });
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <button id="myButton">Click me</button>
+    </body>
+</html>
